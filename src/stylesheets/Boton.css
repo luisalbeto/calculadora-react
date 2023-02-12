@@ -1,0 +1,27 @@
+.ContenedorBoton {
+  height: 83px;
+  display: flex;
+  flex: 1 1;
+  justify-content: center;
+  align-items: center;
+  font-weight: bold;
+  font-size: 38px;
+  background-color: rgb(2, 2, 54);
+  color: white;
+  border-radius: 25px;
+  border: 2px solid white ;
+  cursor: pointer;
+  user-select: none;
+}
+
+.ContenedorBoton:hover {
+  background-color: aquamarine;
+}
+
+.Operador {
+  background-color: rgb(85, 17, 49);
+}
+
+.Operador:hover {
+  background-color: rgb(219, 107, 14);
+}
