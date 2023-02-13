@@ -1,32 +1,41 @@
 import './App.css'
-import calculadoralogo from './images/calculadoralogo.png'
 import Boton from './components/Boton'
 import Pantalla from './components/Pantalla'
 import BotonClear from './components/BotonClear'
+import LogoCalculadora from './components/LogoCalculadora'
 import { useState } from 'react'
-import { evaluate } from 'mathjs'
+import { evaluate} from 'mathjs'
 
 function App() {
+
+  //Funcion para ingresar numero en pantalla
 
   const [input , setInput] = useState('')
 
   const agregarinput = val => {
     setInput(input + val)
   }
-  const calcularResultado = () => (
-    setInput(evaluate(input))
-  )
+
+//funcion para calcular el resuldato
+
+  const calcularResultado = () => {
+
+    if (input) {
+      setInput(evaluate(input))
+    } 
+    else {
+      alert('por favor ingrese los datos para realizar una operacion')
+    }
+    
+}
 
 
   return (
     <div className='App'>
 
-      <div className='ContenedorLogoCalculadora'>
-        <img 
-          className='LogoCalculadora'
-          src={calculadoralogo}
-          alt='logocalculadora'/>
-      </div>
+   <LogoCalculadora></LogoCalculadora>
+        
+      
 
       <div className='ContenedorCalculadora'>
 
